@@ -11,6 +11,16 @@ Using [npm](https://www.npmjs.com/):
 Or [yarn](https://yarnpkg.com/):
 
     $ yarn add redux-immer
+    
+# Features
+ 
+* one time only produce
+* standard-like reducers
+* support react-router integration (`redux-first-history` / `react-router-redux` / `connected-react-router`) routerReducer
+
+# Tips
+You may call `combineReducers` at any level of the reducer hierarchy. It doesn't have to happen at the top. In fact you may use it again to split the child reducers that get too complicated into independent grandchildren, and so on. (exact as original redux.combineReducer https://redux.js.org/api/combinereducers)
+
 Usage
 -----
 
@@ -47,14 +57,14 @@ const initialState = {
   profile: {}
 };
 
-export const user = (draft = initialState, action) => {
+export const user = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_USER: 
-      draft.id = action.id;
-      draft.profile = action.profile;
-      return draft; // or just return;
+      state.id = action.id;
+      state.profile = action.profile;
+      return state; // or just return; (immer way)
     default:
-      return draft;  //important return draft on default for initialState!!
+      return state;  //important return state on default for initialState!!
   }
 };
 ```
@@ -63,13 +73,13 @@ catalog.js
 ```javascript
 const initialState = [];
 
-export const user = (draft = initialState, action) => {
+export const user = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_CATALOG:
-      draft = action.data;
-      return draft; // or just return;
+      state = action.data;
+      return state; // or just return; (immer way)
     default:
-      return draft;  //important return draft on default for initialState!!
+      return state;  //important return draft on default for initialState!!
   }
 };
 ```
