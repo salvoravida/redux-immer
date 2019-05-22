@@ -49,7 +49,7 @@ const initialState = {
 
 export const user = (draft = initialState, action) => {
   switch (action.type) {
-    case types.LOAD_USER: 
+    case LOAD_USER: 
       draft.id = action.id;
       draft.profile = action.profile;
       return draft; // or just return;
@@ -65,7 +65,7 @@ const initialState = [];
 
 export const user = (draft = initialState, action) => {
   switch (action.type) {
-    case types.LOAD_CATALOG:
+    case LOAD_CATALOG:
       draft = action.data;
       return draft; // or just return;
     default:
