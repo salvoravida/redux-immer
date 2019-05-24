@@ -1,6 +1,7 @@
 # redux-immer
 
-`redux-immer` is used to create an equivalent function of Redux combineReducers that works with `immer` state. (like `redux-immutable` but for `immer`)
+`redux-immer` is used to create an equivalent function of Redux combineReducers that works with `immer` state. </br>
+Like `redux-immutable` but for `immer`
 
 Installation
 -----------
