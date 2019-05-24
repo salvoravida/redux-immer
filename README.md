@@ -1,6 +1,6 @@
 # redux-immer
 
-`redux-immer` is used to create an equivalent function of Redux combineReducers that works with `immer` state.
+`redux-immer` is used to create an equivalent function of Redux combineReducers that works with `immer` state. (like `redux-immutable` but for `immer`)
 
 Installation
 -----------
@@ -16,7 +16,7 @@ Or [yarn](https://yarnpkg.com/):
  
 * one time only produce
 * standard-like reducers
-* support react-router integration (`redux-first-history` / `react-router-redux` / `connected-react-router`) routerReducer
+* support react-router routerReducer integration (`redux-first-history` / `react-router-redux` / `connected-react-router`)
 
 # Tips
 You may call `combineReducers` at any level of the reducer hierarchy. It doesn't have to happen at the top. In fact you may use it again to split the child reducers that get too complicated into independent grandchildren, and so on. (exact as original redux.combineReducer https://redux.js.org/api/combinereducers)
