@@ -4,6 +4,7 @@
   "description": "redux-immer is used to create an equivalent function of Redux combineReducers that works with immer state.",
   "main": "lib/redux-immer.js",
   "module": "src/redux-immer.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src --out-dir lib",
     "prepare": "npm run build",
