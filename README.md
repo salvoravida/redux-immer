@@ -1,4 +1,4 @@
-# redux-immer
+# redux-immer  [![npm version](https://img.shields.io/npm/v/redux-immer.svg?style=flat)](https://www.npmjs.org/package/redux-immer)
 
 `redux-immer` is used to create an equivalent function of Redux combineReducers that works with `immer` state. </br>
 Like `redux-immutable` but for `immer`
