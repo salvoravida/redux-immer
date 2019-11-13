@@ -8,19 +8,12 @@ Installation
 Using [npm](https://www.npmjs.com/):
 
     $ npm install --save redux-immer
-
-Or [yarn](https://yarnpkg.com/):
-
-    $ yarn add redux-immer
-    
+   
 # Features
  
 * one time only produce
 * standard-like reducers
 * support react-router routerReducer integration (`redux-first-history` / `react-router-redux` / `connected-react-router`)
-
-# Tips
-You may call `combineReducers` at any level of the reducer hierarchy. It doesn't have to happen at the top. In fact you may use it again to split the child reducers that get too complicated into independent grandchildren, and so on. (exact as original redux.combineReducer https://redux.js.org/api/combinereducers)
 
 Usage
 -----
@@ -41,13 +34,8 @@ export const store = createStore(
      user,
      catalog,
      // ...
-     // [key]: reducerFunction  (change reducer name)
   }),
-  composeWithDevTools(
-    applyMiddleware(sagaMiddleware),
-    applyMiddleware(thunk),
-    applyMiddleware(routerMiddleware),
-  ),
+  // applyMiddleware...
 );
 ```
 
@@ -84,6 +72,9 @@ export const user = (state = initialState, action) => {
   }
 };
 ```
+
+# Tips
+You may call `combineReducers` at any level of the reducer hierarchy. It doesn't have to happen at the top. In fact you may use it again to split the child reducers that get too complicated into independent grandchildren, and so on. (exact as original redux.combineReducer https://redux.js.org/api/combinereducers)
 
 # Feedback
 
