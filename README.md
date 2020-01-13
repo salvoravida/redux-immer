@@ -62,7 +62,7 @@ catalog.js
 ```javascript
 const initialState = [];
 
-export const user = (state = initialState, action) => {
+export const catalog = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_CATALOG:
       state = action.data;
