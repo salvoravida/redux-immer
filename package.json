@@ -1,6 +1,6 @@
 {
   "name": "redux-immer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "redux-immer is used to create an equivalent function of Redux combineReducers that works with immer state.",
   "main": "lib/redux-immer.js",
   "module": "src/redux-immer.js",
