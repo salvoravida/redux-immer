@@ -1,4 +1,7 @@
-/// <reference types="immer" />
-/// <reference types="redux" />
+import { AnyAction, ReducersMapObject, Reducer, Action } from "redux";
+import { IProduce } from "immer/dist/types/types-external";
+export function combineReducers(
+    produce: IProduce,
+    reducers: ReducersMapObject
+): Reducer;
 
-export function combineReducers<S, A extends Action = AnyAction>(produce: IProduce, reducers: ReducersMapObject<S, A> = {} as ReducersMapObject): Reducer<S, A>;

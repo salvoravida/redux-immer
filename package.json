@@ -1,6 +1,6 @@
 {
   "name": "redux-immer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "redux-immer is used to create an equivalent function of Redux combineReducers that works with immer state.",
   "main": "lib/redux-immer.js",
   "module": "src/redux-immer.js",
@@ -37,6 +37,8 @@
     "@babel/core": "7.8.7",
     "@babel/preset-env": "7.8.7",
     "@salvoravida/eslint-config": "0.0.4",
-    "cross-env": "7.0.2"
+    "cross-env": "7.0.2",
+    "immer": "6.0.5",
+    "redux": "4.0.5"
   }
 }
