@@ -38,7 +38,7 @@
     "@babel/preset-env": "7.8.7",
     "@salvoravida/eslint-config": "0.0.4",
     "cross-env": "7.0.2",
-    "immer": "6.0.5",
+    "immer": "8.0.1",
     "redux": "4.0.5"
   }
 }
